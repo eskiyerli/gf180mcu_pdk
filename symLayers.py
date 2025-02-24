@@ -38,7 +38,7 @@ import revedaEditor.backend.dataDefinitions as ddef
 symbolLayer = ddef.edLayer(
     name="symbol",
     pcolor=QColor("green"),
-    pwidth=2,
+    pwidth=4,
     z=2,
     pstyle=Qt.SolidLine,
     visible=True,
@@ -95,6 +95,7 @@ draftLayer = replace(symbolLayer, pcolor=QColor("gray"), bcolor=QColor("gray"), 
 
 # Symbol Pens
 symbolPen = QPen(symbolLayer.pcolor, symbolLayer.pwidth, symbolLayer.pstyle)
+symbolPen.setCosmetic(True)
 stretchSymbolPen = QPen(
     stretchSymbolLayer.pcolor, stretchSymbolLayer.pwidth, stretchSymbolLayer.pstyle
 )
